@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/stcdemo.css' %}">
+</head>
+<body>
+    <h1>{{head_msg}}</h1>
+    <ul>
+        <li>{{sub_msg1}}</li>
+        <li>{{sub_msg2}}</li>
+        <li>{{sub_msg3}}</li>
+      </ul>
+      {% if type == 'movie' %}
+      <img src="../../static/images/films.jpg" alt="">
+      <img src="../../static/images/movie 2.jpg" alt="">
+      {% elif type == 'sports' %}
+      <img src="../../static/images/sports 2.jpg" alt="">
+      <img src="../../static/images/sports 3.jpeg" alt="">
+      {% elif type == 'politics' %}
+      <img src="../../static/images/political 2.jpeg" alt="">
+      <img src="../../static/images/political 3.jpeg" alt="">
+      <img src="../../static/images/poltical.jpg" alt="">
+      {% endif %}  
+</body>
+</html>
